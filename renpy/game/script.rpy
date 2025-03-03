@@ -159,7 +159,19 @@ label barista_scene:
     miraya "День ещё не закончился. Что мне следует посетить?"
 
     jump choose_place
-
+label recommendation:
+    scene 21 with dissolve
+    narrator "Бариста немного задумался, а затем улыбнулся."
+    barista "Ну, если вы хотите что-то особенное, я могу порекомендовать наш лучший напиток — это Медовый Раф. Он с таким необычным вкусом, вам точно понравится."
+    barista "А если на десерт, то у нас есть потрясающий шоколадный торт, он тает во рту."
+    
+    menu:
+        "Выбрать напиток":
+            jump choose_drink
+        "Выбрать десерт":
+            jump choose_dessert
+        "Что-то другое":
+            jump barista_scene
 
 label choose_place:
     menu:
